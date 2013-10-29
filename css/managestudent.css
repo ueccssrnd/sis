@@ -1,0 +1,11 @@
+.tablecontainer{
+    position: absolute;
+    right: 45px;
+    top: 150px;
+}
+
+.buttoncontainer{
+    position: absolute;
+    left: 150px;
+    top: 150px
+}

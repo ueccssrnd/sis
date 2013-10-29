@@ -1,0 +1,99 @@
+.studentbox{
+    /*background-color:#fafafa ;
+    font-size: 18pt;
+    padding-left: 20px;
+    width: 700px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    border:solid 1px #7c7c7c;
+    text-shadow: 1px 1px 0 #bdbdbd;
+    box-shadow: 0 0 6px #2d2d2d;*/
+	padding:5px;
+	width:100%;
+	border-radius:0;
+}
+.studentbox:focus{
+    box-shadow: 0 0 6px #0b7500;
+    outline-color: #0b7500;
+    background-color: white;
+}
+
+.studentselect{
+    /*background-color:#fafafa ;
+    font-size: 18pt;
+    padding-left: 20px;
+    width: 724px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    border:solid 1px #7c7c7c;
+    text-shadow: 1px 1px 0 #bdbdbd;
+    box-shadow: 0 0 10px #2d2d2d;*/
+	border-radius:0;
+}
+
+.studentselect:focus{
+    box-shadow: 0 0 6px #0b7500;
+    outline-color: #0b7500;
+    background-color: white;
+}
+
+.studentarea{
+    background-color:#fafafa ;
+    font-size: 14px;
+    resize:none;
+	border-radius:0;
+    border: none;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border:solid 1px #7c7c7c;
+	width:50%;
+	height:150px;
+}
+
+.studentarea:focus{
+    box-shadow: 0 0 6px #0b7500;
+    outline-color: #0b7500;
+    background-color: white;
+    outline: none;
+}
+
+h1{ 
+    font-weight: normal;
+    font-size: 30pt;
+	font-family:Segoe UI;
+}
+
+.buttons{
+    color:white;
+	background-color:rgb(70,200,120);
+    font-size: 20px;
+    border-radius: 0px;
+	border:none;
+	font-family:Segoe UI;
+}
+input[type="submit"]{
+	height:70px;
+	width:120px;
+}
+input[type="text"]{
+	border-radius:0;
+}
+input[readonly]{
+	cursor:pointer;
+	background-color:white;
+}
+.buttons:hover{
+	background-color:rgba(70,200,120,0.9);
+}
+
+.buttons:focus{
+    outline: 0px;
+}
+.studentselect{
+	color:width:30%;
+}

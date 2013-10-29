@@ -1,0 +1,36 @@
+*{
+    font-family:Segoe UI;
+}
+body{
+    background-color:rgb(60,180,80); 
+}
+#login_form{
+    font-weight:bold;
+    border-radius:5px;
+    background-color:white;
+    color:rgb(60,180,80);
+    position:relative;
+    top:25%;
+    padding:2%;
+    margin:auto;
+    width:40%;
+}
+#login_form h4{
+    font-family:Verdana;
+    font-size:20px;
+    font-weight:normal;
+}
+#login_form input[type="submit"]{
+    margin:auto;
+    width:100%;
+    background-image:none;
+}
+.btn-success{
+    background-color:rgb(90,180,90);
+    border:none;
+}
+.error{
+    color:red;
+    font-weight:bold;
+    font-family:Arial;
+}
