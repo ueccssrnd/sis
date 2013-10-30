@@ -9,12 +9,11 @@ if (isset($_POST['student_number'])) {
     } catch (PDOException $e) {
         die('Oops');
     }
-
+    session_start();
     $sql = "SELECT * FROM student WHERE student_number = ? AND access_code = ?";
     $pds = $pdo->prepare($sql);
     $pds->execute(array($_POST['student_number'], $_POST['access_code']));
     if ($row = $pds->fetch()) {
-        session_start();
         $_SESSION['id'] = $row['id'];
         $_SESSION['student_number'] = $row['student_number'];
         $_SESSION['first_name'] = $row['first_name'];
@@ -31,7 +30,24 @@ if (isset($_POST['student_number'])) {
         $_SESSION['telephone_number'] = $row['telephone_number'];
         header('Location: ../register.php');
     } else {
-        header('Location: ../loginerror.php');
+        $sql = "SELECT * FROM user WHERE username = ? AND access_code = ? AND role = 1";
+        $pds = $pdo->prepare($sql);
+        $pds->execute(array($_POST['student_number'], $_POST['access_code']));
+        if ($row = $pds->fetch()) {
+            if ($_POST['student_number'] == $row['id'] && $_POST['access_code'] == $row['access_code']) {
+                $_SESSION['id'] = $row['id'];
+                $_SESSION['role'] = $row['role'];
+                $_SESSION['username'] = $row['username'];
+                $sql = "UPDATE user SET last_login = NOW() WHERE id = ?";
+                $pds = $pdo->prepare($sql);
+                $pds->execute(array($_SESSION['id']));
+                header('Location: ../managestudent.php');
+            }else{
+                header('Location: ../index.php');
+            }
+        } else {
+            header('Location: ../index.php');
+        }
     }
 } else {
     header('Location: ../index.php');

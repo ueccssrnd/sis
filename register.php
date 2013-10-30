@@ -190,7 +190,7 @@ if (!isset($_SESSION['id'])) {
                                 </div>
                                 <div class = "row">
                                     <div class="span6">
-                                        <textarea class="studentarea" name="guardian_address" value="<?php echo $_SESSION['guardian_address']?>" id = "guardian_placeholder" placeholder="Adress"></textarea>
+                                        <textarea class="studentarea" name="guardian_address" id = "guardian_placeholder" placeholder="Adress"><?php echo $_SESSION['guardian_address']?> </textarea>
                                     </div>
                                 </div>
                                 <div class="row">

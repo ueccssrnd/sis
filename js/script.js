@@ -7,7 +7,7 @@ $(document).ready(function() {
     });
     $('.datepicker').pickadate({
         format:'yyyy/mm/dd',
-        selectYears: true,
+        selectYears: 40,
         selectMonths: true
     });
 });

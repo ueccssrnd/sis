@@ -1,7 +1,13 @@
 <?php
     session_start();
-    if(isset($_SESSION['id'])){
+    if(isset($_SESSION['student_number'])){
         header('Location: register.php');
+    }else if(isset($_SESSION['role'])){
+        if($_SESSION['role'] == 0){
+            
+        }else{
+            
+        }
     }
 ?>
 <!doctype>
